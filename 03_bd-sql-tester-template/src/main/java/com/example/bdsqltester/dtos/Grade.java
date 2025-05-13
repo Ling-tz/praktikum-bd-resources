@@ -1,22 +1,57 @@
 package com.example.bdsqltester.dtos;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 public class Grade {
-    public long userId;
-    public long assignmentId;
-    public double grade;
+    private Long userId;
+    private Long assignmentId;
+    private Double gradeValue;
+    private String userName;
+    private String assignmentName;
 
-    public Grade(long userId, long assignmentId, double grade) {
+    public Grade(Long userId, Long assignmentId, Double gradeValue, String userName, String assignmentName) {
         this.userId = userId;
         this.assignmentId = assignmentId;
-        this.grade = grade;
+        this.gradeValue = gradeValue;
+        this.userName = userName;
+        this.assignmentName = assignmentName;
     }
 
-    public Grade(ResultSet rs) throws SQLException {
-        this.userId = rs.getLong("user_id");
-        this.assignmentId = rs.getLong("assignment_id");
-        this.grade = rs.getDouble("grade");
+    public Long getUserId() {
+        return userId;
+    }
+
+    public Long getAssignmentId() {
+        return assignmentId;
+    }
+
+    public Double getGradeValue() {
+        return gradeValue;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getAssignmentName() {
+        return assignmentName;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public void setAssignmentId(Long assignmentId) {
+        this.assignmentId = assignmentId;
+    }
+
+    public void setGradeValue(Double gradeValue) {
+        this.gradeValue = gradeValue;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setAssignmentName(String assignmentName) {
+        this.assignmentName = assignmentName;
     }
 }

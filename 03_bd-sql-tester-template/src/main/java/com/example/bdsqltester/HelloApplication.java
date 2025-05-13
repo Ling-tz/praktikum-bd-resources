@@ -4,9 +4,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 
 public class HelloApplication extends Application {
@@ -23,7 +20,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         primaryStage = stage;
 
-        stage.setTitle("Hello!");
+        stage.setTitle("Login View");
         stage.setScene(scene);
         stage.show();
     }

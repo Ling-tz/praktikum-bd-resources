@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bdsqltester.scenes.admin.GradesOverviewController">
+    <children>
+        <VBox layoutX="14.0" layoutY="14.0" prefHeight="372.0" prefWidth="572.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+            <children>
+                <Label text="Overall Grades">
+                    <font>
+                        <javafx.scene.text.Font size="18.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </Label>
+                <TableView fx:id="gradesTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="assignmentNameColumn" prefWidth="150.0" text="Assignment" />
+                        <TableColumn fx:id="userNameColumn" prefWidth="150.0" text="User" />
+                        <TableColumn fx:id="finalGradeColumn" prefWidth="100.0" text="Final Grade" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</AnchorPane>
